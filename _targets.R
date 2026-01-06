@@ -10,6 +10,7 @@ tar_option_set(packages = c("tidyverse")) # all the packages you need
 
 # your pipeline
 list(
-  tar_target(df, readData(dataFile = 'data/data.csv'))
+  tar_target(df, readData(dataFile = 'data/data.csv')),
+  tar_target(plot, plot_data(df))
 )
 
